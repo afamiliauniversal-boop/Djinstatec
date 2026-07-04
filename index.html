@@ -2,16 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-967355608"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-967355608');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D&J INSTATEC | Eletricista em São Paulo — Orçamento Grátis em 2h</title>
+<title>D&J INSTATEC | Eletricista em São Paulo | Orçamento Grátis em 2h</title>
 <meta name="description" content="Instalação elétrica errada causa incêndio. D&J INSTATEC: eletricista certificado NR-10 em São Paulo. Instalações, automação, câmeras, energia solar. Orçamento grátis em até 2h pelo WhatsApp.">
 <meta name="theme-color" content="#10243f">
 <link rel="icon" type="image/jpeg" href="images/logo_icon.jpg">
 
 <!-- Open Graph -->
-<meta property="og:title" content="D&J INSTATEC — Sua instalação elétrica está segura?">
+<meta property="og:title" content="D&J INSTATEC: Sua instalação elétrica está segura?">
 <meta property="og:description" content="Eletricista certificado NR-10 em São Paulo. Orçamento grátis em até 2h. Fale agora no WhatsApp.">
+<meta property="og:image" content="https://djinstatec.com.br/images/logo.png">
+<meta property="og:url" content="https://djinstatec.com.br/">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://djinstatec.com.br/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +31,14 @@
 
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
 <!-- HEADER -->
 <header id="header">
   <div class="container nav">
-    <a href="#top" class="logo"><img src="images/logo.png" alt="D&amp;J INSTATEC — Engenharia Elétrica"></a>
+    <a href="#top" class="logo"><img src="images/logo.png" alt="D&amp;J INSTATEC, Engenharia Elétrica"></a>
     <nav class="nav-links" id="navLinks">
       <a href="#servicos">Serviços</a>
       <a href="#diferenciais">Diferenciais</a>
@@ -43,36 +54,106 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <div class="hero-video">
+    <video autoplay muted loop playsinline poster="videos/hero-poster.jpg">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="alert-strip reveal"><span class="pulse"></span><i class="fas fa-triangle-exclamation"></i> Instalação elétrica errada é a maior causa de incêndios residenciais</span>
       <h1 class="reveal d1">Sua instalação elétrica está <span>realmente segura?</span></h1>
-      <p class="lead reveal d2">Fios superaquecendo, disjuntor caindo, cheiro de queimado? Não arrisque sua casa e sua família. Resolvemos com segurança e certificação <strong>NR-10</strong> — atendimento rápido em São Paulo e Grande SP.</p>
-      <div class="hero-cta reveal d2">
-        <a href="https://wa.me/5511992137770?text=Ol%C3%A1!%20Minha%20instala%C3%A7%C3%A3o%20el%C3%A9trica%20precisa%20de%20aten%C3%A7%C3%A3o.%20Pode%20me%20ajudar%3F"
-           class="btn btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Falar agora no WhatsApp</a>
-        <a href="#servicos" class="btn btn-ghost"><i class="fas fa-list-check"></i> Ver Serviços</a>
-      </div>
-      <div class="badges reveal d3">
-        <span class="badge"><i class="fas fa-id-card"></i> MEI Ativo</span>
-        <span class="badge"><i class="fas fa-helmet-safety"></i> Certificado NR-10</span>
-        <span class="badge"><i class="fas fa-building"></i> CNPJ 18.184.811/0001-55</span>
-      </div>
+      <p class="lead reveal d2">Fios superaquecendo, disjuntor caindo, cheiro de queimado? Não arrisque sua casa e sua família. Resolvemos com segurança e certificação <strong>NR-10</strong>, com atendimento rápido em São Paulo e Grande SP.</p>
     </div>
-    <div class="hero-visual reveal d2">
-      <div class="hero-img" id="heroCarousel" aria-label="Trabalhos reais da D&amp;J INSTATEC: instalações elétricas, painéis, iluminação LED, câmeras e automação">
-        <img class="hc-img" alt="Trabalho real D&amp;J INSTATEC">
-        <img class="hc-img" alt="">
+  </div>
+
+  <!-- DECK DE SERVIÇOS — cards em leque, cada um com carrossel de imagens próprio -->
+  <div class="deck reveal d3" id="serviceDeck">
+    <button class="deck-nav prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <div class="deck-track">
+
+      <div class="deck-card" data-folder="images/servicos/instalacoes-eletricas/" data-stars="5" data-tag="Mais pedido">
+        <div class="deck-media"><img class="dc-img" alt="Instalações Elétricas"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Instalações Elétricas</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
       </div>
-      <div class="float-card fc1">
-        <div class="big">2h</div>
-        <div class="lbl">Orçamento grátis</div>
+
+      <div class="deck-card" data-folder="images/servicos/manutencao-eletrica/" data-stars="5" data-tag="Mais pedido">
+        <div class="deck-media"><img class="dc-img" alt="Manutenção Elétrica"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Manutenção Elétrica</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
       </div>
-      <div class="float-card fc2">
-        <div class="stars">★★★★★</div>
-        <div class="lbl">93% de satisfação</div>
+
+      <div class="deck-card" data-folder="images/servicos/automacao-residencial/" data-stars="4" data-tag="">
+        <div class="deck-media"><img class="dc-img" alt="Automação Residencial"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Automação Residencial</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
       </div>
+
+      <div class="deck-card is-center" data-folder="images/servicos/cameras-cftv/" data-stars="5" data-tag="Mais pedido">
+        <div class="deck-media"><img class="dc-img" alt="Câmeras e CFTV"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Câmeras e CFTV</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
+      </div>
+
+      <div class="deck-card" data-folder="images/servicos/iluminacao-tomadas/" data-stars="4" data-tag="">
+        <div class="deck-media"><img class="dc-img" alt="Iluminação e Tomadas"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Iluminação e Tomadas</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
+      </div>
+
+      <div class="deck-card" data-folder="images/servicos/energia-solar/" data-stars="4" data-tag="">
+        <div class="deck-media"><img class="dc-img" alt="Energia Solar"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Energia Solar</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
+      </div>
+
+      <div class="deck-card" data-folder="images/servicos/alarmes-seguranca/" data-stars="4" data-tag="">
+        <div class="deck-media"><img class="dc-img" alt="Alarmes e Segurança"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Alarmes e Segurança</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
+      </div>
+
+      <div class="deck-card" data-folder="images/servicos/projetos-consultoria/" data-stars="3" data-tag="">
+        <div class="deck-media"><img class="dc-img" alt="Projetos e Consultoria"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Projetos e Consultoria</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
+      </div>
+
+      <div class="deck-card" data-folder="images/servicos/interfone-portaria/" data-stars="3" data-tag="">
+        <div class="deck-media"><img class="dc-img" alt="Interfone e Portaria"></div>
+        <div class="deck-top"><span class="deck-brand"><img src="images/logo_icon.jpg" alt=""> D&amp;J Instatec</span></div>
+        <div class="deck-bottom">
+          <h4>Interfone e Portaria</h4>
+          <div class="deck-rating"><span class="deck-stars"></span><span class="deck-tag"></span></div>
+        </div>
+      </div>
+
     </div>
+    <button class="deck-nav next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
   </div>
 </section>
 
@@ -82,7 +163,7 @@
     <div class="stat reveal"><div class="num" data-target="500" data-suffix="+">0</div><div class="lbl">Projetos entregues</div></div>
     <div class="stat reveal d1"><div class="num" data-target="15" data-suffix=" anos">0</div><div class="lbl">De experiência</div></div>
     <div class="stat reveal d2"><div class="num" data-target="93" data-suffix="%">0</div><div class="lbl">Clientes satisfeitos</div></div>
-    <div class="stat reveal d3"><div class="num" data-target="180" data-suffix=" dias">0</div><div class="lbl">De garantia no serviço</div></div>
+    <div class="stat reveal d3"><div class="num" data-target="6" data-suffix=" meses">0</div><div class="lbl">De garantia no serviço</div></div>
   </div>
 </section>
 
@@ -117,7 +198,7 @@
   </div>
   <div class="container">
     <div class="why-grid">
-      <div class="why-item reveal"><div class="ico"><i class="fas fa-shield-halved"></i></div><h4>Garantia de 180 dias</h4><p>90 dias por lei + 90 dias por nossa conta sobre o serviço.</p></div>
+      <div class="why-item reveal"><div class="ico"><i class="fas fa-shield-halved"></i></div><h4>Garantia de 6 meses</h4><p>3 meses por lei + 3 meses por nossa conta sobre o serviço.</p></div>
       <div class="why-item reveal d1"><div class="ico"><i class="fas fa-helmet-safety"></i></div><h4>Certificação NR-10</h4><p>Profissional habilitado em segurança elétrica.</p></div>
       <div class="why-item reveal d2"><div class="ico"><i class="fas fa-bolt-lightning"></i></div><h4>Resposta rápida</h4><p>Atendimento ágil pelo WhatsApp, sem enrolação.</p></div>
       <div class="why-item reveal d3"><div class="ico"><i class="fas fa-pen-ruler"></i></div><h4>Projetos em AutoCAD</h4><p>Documentação técnica precisa e profissional.</p></div>
@@ -185,7 +266,7 @@
           <li><div class="ico"><i class="fab fa-whatsapp"></i></div><div><div class="lbl">WhatsApp</div><a href="https://wa.me/5511992137770" target="_blank" rel="noopener" class="val">(11) 99213-7770</a></div></li>
           <li><div class="ico"><i class="fas fa-envelope"></i></div><div><div class="lbl">E-mail</div><a href="mailto:djinstatec@gmail.com" class="val">djinstatec@gmail.com</a></div></li>
           <li><div class="ico"><i class="fas fa-location-dot"></i></div><div><div class="lbl">Atendimento</div><div class="val">São Paulo / SP e Grande SP</div></div></li>
-          <li><div class="ico"><i class="fas fa-globe"></i></div><div><div class="lbl">Site</div><a href="https://djinstatec.negocio.site" target="_blank" rel="noopener" class="val">djinstatec.negocio.site</a></div></li>
+          <li><div class="ico"><i class="fas fa-globe"></i></div><div><div class="lbl">Site</div><a href="https://djinstatec.com.br" target="_blank" rel="noopener" class="val">djinstatec.com.br</a></div></li>
         </ul>
         <div class="price-anchor" style="background:rgba(255,80,80,.07);border-color:rgba(255,80,80,.25)">
           <div class="tag" style="color:#ff8a8a"><i class="fas fa-fire-flame-curved"></i> Atendimentos limitados por semana</div>
@@ -235,7 +316,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
-        <a href="#top" class="logo"><img src="images/logo.png" alt="D&amp;J INSTATEC — Engenharia Elétrica"></a>
+        <a href="#top" class="logo"><img src="images/logo.png" alt="D&amp;J INSTATEC, Engenharia Elétrica"></a>
         <p>Engenharia Elétrica e Automação. Serviços elétricos residenciais e comerciais com segurança, certificação NR-10 e garantia.</p>
         <p><b>Responsável técnico:</b> Eletrotécnico, cursante de Engenharia Elétrica, técnico em Eletrônica e Mecânica, AutoCAD e NR-10.</p>
       </div>
@@ -251,7 +332,7 @@
         <h5>Contato</h5>
         <a href="https://wa.me/5511992137770" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> (11) 99213-7770</a>
         <a href="mailto:djinstatec@gmail.com"><i class="fas fa-envelope"></i> djinstatec@gmail.com</a>
-        <a href="https://djinstatec.negocio.site" target="_blank" rel="noopener"><i class="fas fa-globe"></i> djinstatec.negocio.site</a>
+        <a href="https://djinstatec.com.br" target="_blank" rel="noopener"><i class="fas fa-globe"></i> djinstatec.com.br</a>
         <p><i class="fas fa-location-dot"></i> São Paulo / SP e Grande SP</p>
       </div>
     </div>
@@ -269,6 +350,6 @@
   <span>Conversar no WhatsApp</span>
 </a>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=9"></script>
 </body>
 </html>

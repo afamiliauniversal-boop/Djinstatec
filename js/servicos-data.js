@@ -1,0 +1,167 @@
+/* ===== Conteúdo das páginas de serviço =====
+   Cada chave é o slug (mesmo nome da pasta em images/servicos/<slug>/). */
+window.DJ_SERVICES = {
+
+  'instalacoes-eletricas': {
+    icon: 'fa-plug-circle-bolt',
+    title: 'Instalações Elétricas',
+    eyebrow: '// a base de tudo',
+    tagline: 'Uma instalação elétrica bem feita não aparece. Mas evita que sua casa vire notícia.',
+    lead: 'Fiação errada, subdimensionada ou remendada é a causa nº 1 de incêndios residenciais no Brasil. Fazemos a instalação elétrica completa da sua casa, apartamento ou empresa do jeito que deveria ser: dentro da norma, pensada para o que você realmente vai usar hoje e daqui a alguns anos.',
+    bullets: [
+      'Fiação nova e dimensionada para o consumo real da sua casa (chuveiro, ar-condicionado, forno elétrico...)',
+      'Quadro de distribuição organizado, identificado e com disjuntores corretos para cada circuito',
+      'Pontos de tomada extras nos lugares que você realmente precisa, não só onde "sempre foi"',
+      'Instalação em obra nova, reforma ou retrofit de imóvel antigo',
+      'Laudo técnico com ART quando o projeto exige',
+    ],
+    notTitle: 'O que não fazemos',
+    notText: 'Não "gambiarra". Se a sua instalação atual tem risco, vamos te dizer antes de continuar, mesmo que isso signifique um orçamento maior do que você esperava.',
+    waMsg: 'Olá! Quero um orçamento para Instalação Elétrica.',
+  },
+
+  'manutencao-eletrica': {
+    icon: 'fa-screwdriver-wrench',
+    title: 'Manutenção Elétrica',
+    eyebrow: '// resolve agora',
+    tagline: 'Disjuntor caindo toda hora? Cheiro de queimado? Isso não passa sozinho.',
+    lead: 'Problema elétrico intermitente é o mais perigoso de todos: some, some, e um dia não some mais. Fazemos o diagnóstico certo, não trocamos disjuntor no escuro, e resolvemos a causa, não só o sintoma.',
+    bullets: [
+      'Diagnóstico técnico de curto-circuito, sobrecarga e mau contato',
+      'Troca de disjuntores, fiação danificada e quadros antigos',
+      'Atendimento rápido para casos urgentes (chuveiro sem energia, luz piscando, cheiro de queimado)',
+      'Revisão preventiva completa antes que o problema apareça de vez',
+      'Relatório simples do que foi encontrado e do que foi corrigido',
+    ],
+    notTitle: 'Quando chamar a gente',
+    notText: 'Disjuntor caindo, tomada esquentando, luz piscando sem motivo ou cheiro de queimado: não espere "passar". Nesses casos, quanto antes chamar, mais barato e mais seguro.',
+    waMsg: 'Preciso de Manutenção Elétrica urgente.',
+  },
+
+  'automacao-residencial': {
+    icon: 'fa-house-signal',
+    title: 'Automação Residencial',
+    eyebrow: '// sua casa, mais inteligente',
+    tagline: 'Sua casa não precisa ser só elétrica. Ela pode entender você.',
+    lead: 'Imagina chegar em casa e as luzes já acenderem na intensidade certa, as tomadas da sala desligarem sozinhas quando você sai, e tudo isso controlado do seu celular, de qualquer lugar. Automação residencial não é luxo de filme: é conforto, economia de energia e mais controle sobre a sua própria casa, usando o que você já tem.',
+    bullets: [
+      'Iluminação inteligente: dimerização, cor e cenas por ambiente',
+      'Controle de tomadas e aparelhos pelo aplicativo, de qualquer lugar',
+      'Cenas automáticas: "bom dia", "saindo de casa", "modo noite", tudo com um toque',
+      'Integração com Alexa, Google Home e assistentes de voz',
+      'Sensores de presença que acendem e apagam luzes sozinhos',
+    ],
+    notTitle: 'O que não é',
+    notText: 'Automação de verdade não trava, não precisa reiniciar toda semana e não exige que você vire técnico de TI. Focamos em soluções estáveis e compatíveis com o que sua família já usa, sem depender de gambiarra de aplicativo.',
+    waMsg: 'Quero automatizar minha casa. Me explica como funciona?',
+  },
+
+  'cameras-cftv': {
+    icon: 'fa-video',
+    title: 'Câmeras e CFTV',
+    eyebrow: '// proteção 24 horas',
+    tagline: 'Você não precisa estar em casa para saber o que acontece nela.',
+    lead: 'Instalamos sistemas de monitoramento profissional com acesso remoto pelo celular, você vê a garagem, a portaria, o quintal ou a loja em tempo real, de onde estiver. É o serviço que mais pedimos, e por um motivo simples: tranquilidade não tem preço.',
+    bullets: [
+      'Câmeras HD/4K com visão noturna real, não só "modo escuro"',
+      'Gravação em nuvem ou DVR local, você escolhe',
+      'Acesso remoto pelo celular, de qualquer lugar do mundo',
+      'Cobertura de portão, garagem, áreas comuns e pontos cegos',
+      'Projeto pensado para o seu imóvel, não um kit genérico',
+    ],
+    notTitle: 'Como funciona a instalação',
+    notText: 'Visitamos, identificamos os pontos cegos reais da sua casa ou condomínio, e só depois definimos quantas câmeras e onde. Sem vender câmera a mais que você não precisa.',
+    waMsg: 'Quero instalar Câmeras e CFTV.',
+  },
+
+  'iluminacao-tomadas': {
+    icon: 'fa-lightbulb',
+    title: 'Iluminação e Tomadas',
+    eyebrow: '// todo detalhe conta',
+    tagline: 'A diferença entre uma casa comum e uma casa bem resolvida está na iluminação.',
+    lead: 'Ponto de luz mal posicionado, tomada longe demais da TV, fiação velha que esquenta, pequenos detalhes que atrapalham o dia a dia. Planejamos a iluminação e os pontos de tomada pensando em como você realmente usa cada cômodo.',
+    bullets: [
+      'Iluminação de destaque: spots, fita LED, sanca e efeitos',
+      'Pontos de tomada extras exatamente onde você precisa (TV, home office, cozinha)',
+      'Substituição de fiação antiga e quadros de tomada saturados',
+      'Projeto de iluminação técnica para comércio e escritório',
+      'Dimerização e controle de intensidade por ambiente',
+    ],
+    notTitle: 'Vale a pena revisar',
+    notText: 'Se sua casa tem poucas tomadas e você usa muitos "T" e extensões, isso é risco de incêndio, não só falta de estética. Vale revisar antes de continuar improvisando.',
+    waMsg: 'Quero orçamento de Iluminação e Tomadas.',
+  },
+
+  'energia-solar': {
+    icon: 'fa-solar-panel',
+    title: 'Energia Solar',
+    eyebrow: '// economia real, todo mês',
+    tagline: 'Sua conta de luz não precisa ser um susto todo mês.',
+    lead: 'Energia solar fotovoltaica reduz drasticamente o valor da sua conta de luz e se paga em alguns anos, depois disso, é economia líquida por décadas. Fazemos o dimensionamento correto do sistema para o seu consumo real, não um pacote genérico.',
+    bullets: [
+      'Dimensionamento do sistema com base no seu histórico real de consumo',
+      'Instalação de painéis e inversor com garantia de fabricante',
+      'Estimativa de economia mensal antes de você fechar negócio',
+      'Projeto e homologação junto à concessionária de energia',
+      'Acompanhamento da geração pelo aplicativo',
+    ],
+    notTitle: 'O que perguntar antes de contratar',
+    notText: 'Desconfie de quem promete "conta zero" sem olhar sua conta de luz. Fazemos as contas com você antes de vender qualquer coisa.',
+    waMsg: 'Quero saber sobre Energia Solar para minha casa.',
+  },
+
+  'alarmes-seguranca': {
+    icon: 'fa-bell',
+    title: 'Alarmes e Segurança',
+    eyebrow: '// a primeira linha de defesa',
+    tagline: 'A maioria das invasões começa quando ninguém percebe a tempo.',
+    lead: 'Um sistema de alarme bem instalado é a diferença entre perceber a tempo e descobrir depois. Instalamos sensores de abertura e movimento, sirene e central com aplicativo, tudo integrado, sem depender de monitoramento caro de terceiros se você não quiser.',
+    bullets: [
+      'Sensores de abertura para portas e janelas',
+      'Sensores de movimento em áreas estratégicas',
+      'Sirene local e alerta direto no seu celular',
+      'Integração com as câmeras, se você já tiver ou quiser instalar',
+      'Central simples de operar, sem manual de 40 páginas',
+    ],
+    notTitle: 'Como funciona',
+    notText: 'Avaliamos os pontos de entrada reais da sua casa antes de indicar quantos sensores fazem sentido, sem empurrar kit fechado que não serve pro seu imóvel.',
+    waMsg: 'Quero instalar Alarme de Segurança.',
+  },
+
+  'projetos-consultoria': {
+    icon: 'fa-pen-ruler',
+    title: 'Projetos e Consultoria',
+    eyebrow: '// papel que vira segurança',
+    tagline: 'Antes do disjuntor, tem um projeto. E o projeto certo evita retrabalho caro.',
+    lead: 'Projetos elétricos em AutoCAD e consultoria técnica para quem vai construir, reformar ou regularizar um imóvel. Documentação com ART quando necessário, seguindo as normas NR-10 e NBR 5410, o tipo de detalhe que faz diferença na hora da vistoria.',
+    bullets: [
+      'Projeto elétrico completo em AutoCAD, residencial ou predial',
+      'Laudo técnico com ART para regularização e vistorias',
+      'Consultoria em eficiência energética para reduzir custos',
+      'Adequação de instalações antigas às normas atuais',
+      'Suporte técnico para engenheiros, arquitetos e construtoras',
+    ],
+    notTitle: 'Para quem é',
+    notText: 'Ideal para quem está construindo, reformando, ou precisa regularizar um imóvel para venda, financiamento ou vistoria do condomínio.',
+    waMsg: 'Preciso de Projeto Elétrico ou Consultoria.',
+  },
+
+  'interfone-portaria': {
+    icon: 'fa-house-lock',
+    title: 'Interfone e Portaria',
+    eyebrow: '// quem entra, você decide',
+    tagline: 'O primeiro ponto de segurança da sua casa é saber quem está na porta.',
+    lead: 'Instalamos e damos manutenção em interfones residenciais e de condomínio, portões automáticos e sistemas de acesso, integrados ao seu celular quando possível, para você atender de qualquer lugar.',
+    bullets: [
+      'Interfone residencial e de condomínio, com ou sem vídeo',
+      'Portões automáticos: instalação, motor e manutenção',
+      'Integração com o celular para atender remotamente',
+      'Manutenção de sistemas antigos que pararam de funcionar direito',
+      'Substituição de fiação de interfone deteriorada',
+    ],
+    notTitle: 'Manutenção também conta',
+    notText: 'Interfone que "às vezes funciona" costuma ser fiação antiga, não o aparelho. Muitas vezes resolvemos sem trocar equipamento nenhum.',
+    waMsg: 'Quero orçamento de Interfone/Portaria.',
+  },
+
+};
