@@ -74,16 +74,28 @@ if('IntersectionObserver' in window){
   nums.forEach(el=>el.textContent=el.dataset.target+(el.dataset.suffix||''));
 }
 
-/* ===== Portfolio filter ===== */
-const filters=document.querySelectorAll('.filter'),pfItems=document.querySelectorAll('.pf-item');
-filters.forEach(f=>f.addEventListener('click',()=>{
-  filters.forEach(x=>x.classList.remove('active'));f.classList.add('active');
-  const cat=f.dataset.filter;
-  pfItems.forEach(item=>{
-    const show=cat==='all'||item.dataset.cat===cat;
-    item.style.display=show?'':'none';
-  });
-}));
+/* ===== Galeria "Processo" (bastidores) — carrega sozinha todas as fotos de images/processo/ =====
+   Mesma lógica de detecção automática do carrossel dos serviços: testa 1.jpg, 2.jpg... até não
+   achar mais nenhuma. Adicionar fotos na pasta é suficiente, não precisa mexer em HTML/JS. */
+(function(){
+  const gallery=document.getElementById('processoGallery');
+  if(!gallery)return;
+  let n=1;
+  const MAX_PROBE=200;
+  (function probe(){
+    const test=new Image();
+    test.onload=()=>{
+      const item=document.createElement('div');
+      item.className='pf-item reveal show';
+      item.innerHTML=`<img src="images/processo/${n}.jpg" alt="Processo de trabalho D&J INSTATEC">`;
+      gallery.appendChild(item);
+      n++;
+      if(n<=MAX_PROBE)probe();
+    };
+    test.onerror=()=>{};
+    test.src=`images/processo/${n}.jpg`;
+  })();
+})();
 
 /* ===== WhatsApp form ===== */
 const WA_NUMBER='5511992137770';

@@ -2,9 +2,9 @@
    Cada chave é o slug (mesmo nome da pasta em images/servicos/<slug>/). */
 window.DJ_SERVICES = {
 
-  'instalacoes-eletricas': {
+  'instalacao-eletrica': {
     icon: 'fa-plug-circle-bolt',
-    title: 'Instalações Elétricas',
+    title: 'Instalação Elétrica',
     eyebrow: '// a base de tudo',
     tagline: 'Uma instalação elétrica bem feita não aparece. Mas evita que sua casa vire notícia.',
     lead: 'Fiação errada, subdimensionada ou remendada é a causa nº 1 de incêndios residenciais no Brasil. Fazemos a instalação elétrica completa da sua casa, apartamento ou empresa do jeito que deveria ser: dentro da norma, pensada para o que você realmente vai usar hoje e daqui a alguns anos.',
@@ -38,12 +38,12 @@ window.DJ_SERVICES = {
     waMsg: 'Preciso de Manutenção Elétrica urgente.',
   },
 
-  'automacao-residencial': {
+  'automacao-eletrica': {
     icon: 'fa-house-signal',
-    title: 'Automação Residencial',
+    title: 'Automação Elétrica',
     eyebrow: '// sua casa, mais inteligente',
     tagline: 'Sua casa não precisa ser só elétrica. Ela pode entender você.',
-    lead: 'Imagina chegar em casa e as luzes já acenderem na intensidade certa, as tomadas da sala desligarem sozinhas quando você sai, e tudo isso controlado do seu celular, de qualquer lugar. Automação residencial não é luxo de filme: é conforto, economia de energia e mais controle sobre a sua própria casa, usando o que você já tem.',
+    lead: 'Imagina chegar em casa e as luzes já acenderem na intensidade certa, as tomadas da sala desligarem sozinhas quando você sai, e tudo isso controlado do seu celular, de qualquer lugar. Automação não é luxo de filme: é conforto, economia de energia e mais controle sobre a sua própria casa, usando o que você já tem.',
     bullets: [
       'Iluminação inteligente: dimerização, cor e cenas por ambiente',
       'Controle de tomadas e aparelhos pelo aplicativo, de qualquer lugar',
@@ -56,9 +56,9 @@ window.DJ_SERVICES = {
     waMsg: 'Quero automatizar minha casa. Me explica como funciona?',
   },
 
-  'cameras-cftv': {
+  'cftv': {
     icon: 'fa-video',
-    title: 'Câmeras e CFTV',
+    title: 'CFTV',
     eyebrow: '// proteção 24 horas',
     tagline: 'Você não precisa estar em casa para saber o que acontece nela.',
     lead: 'Instalamos sistemas de monitoramento profissional com acesso remoto pelo celular, você vê a garagem, a portaria, o quintal ou a loja em tempo real, de onde estiver. É o serviço que mais pedimos, e por um motivo simples: tranquilidade não tem preço.',
@@ -71,43 +71,61 @@ window.DJ_SERVICES = {
     ],
     notTitle: 'Como funciona a instalação',
     notText: 'Visitamos, identificamos os pontos cegos reais da sua casa ou condomínio, e só depois definimos quantas câmeras e onde. Sem vender câmera a mais que você não precisa.',
-    waMsg: 'Quero instalar Câmeras e CFTV.',
+    waMsg: 'Quero instalar CFTV.',
   },
 
-  'iluminacao-tomadas': {
+  'iluminacao': {
     icon: 'fa-lightbulb',
-    title: 'Iluminação e Tomadas',
+    title: 'Iluminação',
     eyebrow: '// todo detalhe conta',
     tagline: 'A diferença entre uma casa comum e uma casa bem resolvida está na iluminação.',
-    lead: 'Ponto de luz mal posicionado, tomada longe demais da TV, fiação velha que esquenta, pequenos detalhes que atrapalham o dia a dia. Planejamos a iluminação e os pontos de tomada pensando em como você realmente usa cada cômodo.',
+    lead: 'Ponto de luz mal posicionado, fiação velha que esquenta, ambiente sem a intensidade certa, pequenos detalhes que atrapalham o dia a dia. Planejamos a iluminação pensando em como você realmente usa cada cômodo.',
     bullets: [
       'Iluminação de destaque: spots, fita LED, sanca e efeitos',
-      'Pontos de tomada extras exatamente onde você precisa (TV, home office, cozinha)',
-      'Substituição de fiação antiga e quadros de tomada saturados',
+      'Substituição de fiação antiga e pontos de luz saturados',
       'Projeto de iluminação técnica para comércio e escritório',
       'Dimerização e controle de intensidade por ambiente',
+      'Troca de luminárias antigas por LED, com economia imediata na conta',
     ],
     notTitle: 'Vale a pena revisar',
-    notText: 'Se sua casa tem poucas tomadas e você usa muitos "T" e extensões, isso é risco de incêndio, não só falta de estética. Vale revisar antes de continuar improvisando.',
-    waMsg: 'Quero orçamento de Iluminação e Tomadas.',
+    notText: 'Se sua casa tem iluminação fraca ou pontos que "às vezes piscam", geralmente é fiação, não a lâmpada. Vale revisar antes de continuar trocando lâmpada atrás de lâmpada.',
+    waMsg: 'Quero orçamento de Iluminação.',
   },
 
-  'energia-solar': {
+  'iluminacao-de-moveis': {
+    icon: 'fa-couch',
+    title: 'Iluminação de Móveis',
+    eyebrow: '// o detalhe que valoriza o ambiente',
+    tagline: 'A diferença entre um móvel bonito e um móvel que impressiona está na luz.',
+    lead: 'LED embutido em armários, painéis, nichos e móveis planejados, com fiação escondida e acabamento limpo. É o tipo de detalhe que ninguém pede no orçamento inicial, mas todo mundo comenta quando vê pronto.',
+    bullets: [
+      'Fita de LED embutida em móveis, nichos e painéis, sem fio aparente',
+      'Iluminação de destaque para racks, armários e cozinhas planejadas',
+      'Sensor de presença para luz de closet e armários acender sozinha',
+      'Integração com dimmer para ajustar a intensidade pelo ambiente',
+      'Trabalho em conjunto com marceneiro ou projeto de interiores já pronto',
+    ],
+    notTitle: 'Quando chamar a gente',
+    notText: 'O ideal é planejar a fiação da iluminação de móveis ANTES da marcenaria ficar pronta, mas também resolvemos em móveis já montados, com o mínimo de transtorno possível.',
+    waMsg: 'Quero orçamento de Iluminação de Móveis.',
+  },
+
+  'painel-solar': {
     icon: 'fa-solar-panel',
-    title: 'Energia Solar',
+    title: 'Painel Solar',
     eyebrow: '// economia real, todo mês',
     tagline: 'Sua conta de luz não precisa ser um susto todo mês.',
     lead: 'Energia solar fotovoltaica reduz drasticamente o valor da sua conta de luz e se paga em alguns anos, depois disso, é economia líquida por décadas. Fazemos o dimensionamento correto do sistema para o seu consumo real, não um pacote genérico.',
     bullets: [
       'Dimensionamento do sistema com base no seu histórico real de consumo',
       'Instalação de painéis e inversor com garantia de fabricante',
+      'Sistemas on-grid (conectado à rede) e off-grid (autonomia total)',
       'Estimativa de economia mensal antes de você fechar negócio',
       'Projeto e homologação junto à concessionária de energia',
-      'Acompanhamento da geração pelo aplicativo',
     ],
     notTitle: 'O que perguntar antes de contratar',
     notText: 'Desconfie de quem promete "conta zero" sem olhar sua conta de luz. Fazemos as contas com você antes de vender qualquer coisa.',
-    waMsg: 'Quero saber sobre Energia Solar para minha casa.',
+    waMsg: 'Quero saber sobre Painel Solar para minha casa.',
   },
 
   'alarmes-seguranca': {
@@ -128,9 +146,9 @@ window.DJ_SERVICES = {
     waMsg: 'Quero instalar Alarme de Segurança.',
   },
 
-  'projetos-consultoria': {
+  'projetos-eletricos': {
     icon: 'fa-pen-ruler',
-    title: 'Projetos e Consultoria',
+    title: 'Projetos Elétricos',
     eyebrow: '// papel que vira segurança',
     tagline: 'Antes do disjuntor, tem um projeto. E o projeto certo evita retrabalho caro.',
     lead: 'Projetos elétricos em AutoCAD e consultoria técnica para quem vai construir, reformar ou regularizar um imóvel. Documentação com ART quando necessário, seguindo as normas NR-10 e NBR 5410, o tipo de detalhe que faz diferença na hora da vistoria.',
@@ -143,25 +161,61 @@ window.DJ_SERVICES = {
     ],
     notTitle: 'Para quem é',
     notText: 'Ideal para quem está construindo, reformando, ou precisa regularizar um imóvel para venda, financiamento ou vistoria do condomínio.',
-    waMsg: 'Preciso de Projeto Elétrico ou Consultoria.',
+    waMsg: 'Preciso de Projeto Elétrico.',
   },
 
-  'interfone-portaria': {
-    icon: 'fa-house-lock',
-    title: 'Interfone e Portaria',
+  'interfone': {
+    icon: 'fa-phone-volume',
+    title: 'Interfone',
     eyebrow: '// quem entra, você decide',
     tagline: 'O primeiro ponto de segurança da sua casa é saber quem está na porta.',
-    lead: 'Instalamos e damos manutenção em interfones residenciais e de condomínio, portões automáticos e sistemas de acesso, integrados ao seu celular quando possível, para você atender de qualquer lugar.',
+    lead: 'Instalamos e damos manutenção em interfones residenciais e de condomínio, com ou sem fio, integrados ao seu celular quando possível, para você atender de qualquer lugar.',
     bullets: [
       'Interfone residencial e de condomínio, com ou sem vídeo',
-      'Portões automáticos: instalação, motor e manutenção',
+      'Interfone sem fio para casas e imóveis sem infraestrutura pronta',
       'Integração com o celular para atender remotamente',
       'Manutenção de sistemas antigos que pararam de funcionar direito',
       'Substituição de fiação de interfone deteriorada',
     ],
     notTitle: 'Manutenção também conta',
     notText: 'Interfone que "às vezes funciona" costuma ser fiação antiga, não o aparelho. Muitas vezes resolvemos sem trocar equipamento nenhum.',
-    waMsg: 'Quero orçamento de Interfone/Portaria.',
+    waMsg: 'Quero orçamento de Interfone.',
+  },
+
+  'controlador-de-acesso': {
+    icon: 'fa-fingerprint',
+    title: 'Controlador de Acesso',
+    eyebrow: '// quem entra, fica registrado',
+    tagline: 'Chave você perde. Cartão você esquece. A entrada da sua casa merece mais que isso.',
+    lead: 'Instalamos fechaduras eletrônicas e controladores de acesso para portas, portões e áreas restritas, com senha, biometria, cartão ou aplicativo. Ideal para casas, empresas e condomínios que querem saber exatamente quem entra e quando.',
+    bullets: [
+      'Fechaduras eletrônicas com senha, biometria ou cartão de aproximação',
+      'Controle de acesso para portões, garagens e áreas restritas',
+      'Integração com interfone e câmeras já instalados',
+      'Cadastro e remoção rápida de usuários, sem precisar trocar fechadura',
+      'Instalação em porta de madeira, vidro ou alumínio',
+    ],
+    notTitle: 'Como funciona',
+    notText: 'Avaliamos o tipo de porta e o fluxo real de pessoas antes de indicar a fechadura certa, biometria nem sempre é a melhor opção para todo mundo.',
+    waMsg: 'Quero orçamento de Controlador de Acesso.',
+  },
+
+  'trabalho-altura': {
+    icon: 'fa-stairs',
+    title: 'Trabalho em Altura',
+    eyebrow: '// segurança em primeiro lugar',
+    tagline: 'Serviço elétrico em telhado, forro alto ou fachada não é para amador.',
+    lead: 'Fazemos serviços elétricos em áreas de difícil acesso, andaimes, forros altos, fachadas e telhados, com equipamento de segurança adequado e profissional treinado. O tipo de trabalho que exige mais do que só saber mexer em fiação.',
+    bullets: [
+      'Instalação e manutenção elétrica em pé-direito alto e forros',
+      'Uso de andaime e equipamento de proteção individual (EPI) certificado',
+      'Serviços em fachadas, áreas externas e coberturas',
+      'Instalação de iluminação e cabeamento em locais de acesso restrito',
+      'Avaliação prévia do local antes de qualquer execução em altura',
+    ],
+    notTitle: 'Segurança não é opcional',
+    notText: 'Trabalho em altura sem equipamento correto é risco real de acidente grave. Não abrimos mão do EPI e do planejamento antes de subir, mesmo que isso leve mais tempo.',
+    waMsg: 'Preciso de serviço elétrico com Trabalho em Altura.',
   },
 
 };

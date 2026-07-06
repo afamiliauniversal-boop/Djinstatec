@@ -30,17 +30,21 @@ Djinstatec-publish/
 │   └── servicos-data.js        ← textos de cada serviço (título, descrição, bullets, WhatsApp)
 ├── images/
 │   ├── logo.png / logo_icon.jpg
+│   ├── processo/                ← galeria de bastidores (seção Portfólio), 1.jpg, 2.jpg...
 │   └── servicos/
-│       ├── s_0001.jpg ...      ← banco de fotos genéricas (não usado diretamente no site)
-│       ├── instalacoes-eletricas/1.jpg
-│       ├── manutencao-eletrica/1.jpg
-│       ├── automacao-residencial/1.jpg
-│       ├── cameras-cftv/1.jpg
-│       ├── iluminacao-tomadas/1.jpg
-│       ├── energia-solar/1.jpg
+│       ├── s_0001.jpg ...      ← banco de fotos genéricas antigo (não usado diretamente no site)
+│       ├── instalacao-eletrica/1.jpg, 2.jpg...
+│       ├── manutencao-eletrica/1.jpg, 2.jpg...
+│       ├── automacao-eletrica/1.jpg, 2.jpg...
+│       ├── cftv/1.jpg, 2.jpg...
+│       ├── iluminacao/1.jpg, 2.jpg...
+│       ├── iluminacao-de-moveis/1.jpg, 2.jpg...
+│       ├── painel-solar/1.jpg, 2.jpg...
 │       ├── alarmes-seguranca/1.jpg
-│       ├── projetos-consultoria/1.jpg
-│       └── interfone-portaria/1.jpg
+│       ├── projetos-eletricos/1.jpg, 2.jpg...
+│       ├── interfone/1.jpg, 2.jpg...
+│       ├── controlador-de-acesso/1.jpg, 2.jpg...
+│       └── trabalho-altura/1.jpg, 2.jpg...
 ├── videos/
 │   ├── hero.mp4                ← vídeo de fundo do hero (atrás do título)
 │   └── hero-poster.jpg
@@ -57,23 +61,36 @@ de detalhe daquele serviço (`servico.html?s=<slug>`).
 
 ### Como trocar as fotos de um serviço
 
-1. Vá até a pasta do serviço em `images/servicos/<slug>/` (os 9 slugs estão na tabela abaixo).
+1. Vá até a pasta do serviço em `images/servicos/<slug>/` (os 12 slugs estão na tabela abaixo).
 2. Nomeie as fotos em sequência: `1.jpg`, `2.jpg`, `3.jpg`, `4.jpg`...
 3. Pronto. **Não precisa mexer em nenhum código.** O site detecta sozinho quantas fotos existem
    (ele testa `1.jpg`, `2.jpg`... até não achar mais nenhuma) e gira todas, uma a cada segundo,
    tanto no card pequeno quanto na página de detalhe.
 
-| Slug (nome da pasta)         | Serviço                  |
+| Slug (nome da pasta)      | Serviço                |
 |---|---|
-| `instalacoes-eletricas`      | Instalações Elétricas    |
-| `manutencao-eletrica`        | Manutenção Elétrica      |
-| `automacao-residencial`      | Automação Residencial    |
-| `cameras-cftv`               | Câmeras e CFTV           |
-| `iluminacao-tomadas`         | Iluminação e Tomadas     |
-| `energia-solar`              | Energia Solar            |
-| `alarmes-seguranca`          | Alarmes e Segurança      |
-| `projetos-consultoria`       | Projetos e Consultoria   |
-| `interfone-portaria`         | Interfone e Portaria     |
+| `instalacao-eletrica`     | Instalação Elétrica    |
+| `manutencao-eletrica`     | Manutenção Elétrica    |
+| `automacao-eletrica`      | Automação Elétrica     |
+| `cftv`                    | CFTV                   |
+| `iluminacao`              | Iluminação             |
+| `iluminacao-de-moveis`    | Iluminação de Móveis   |
+| `painel-solar`            | Painel Solar           |
+| `alarmes-seguranca`       | Alarmes e Segurança    |
+| `projetos-eletricos`      | Projetos Elétricos     |
+| `interfone`               | Interfone              |
+| `controlador-de-acesso`   | Controlador de Acesso  |
+| `trabalho-altura`         | Trabalho em Altura     |
+
+> `alarmes-seguranca` ainda está só com uma foto placeholder — não veio pasta de fotos reais
+> desse serviço, é só colocar `1.jpg`, `2.jpg`... na pasta quando tiver.
+
+### Galeria de bastidores (seção Portfólio)
+
+A seção "Nosso processo de trabalho" funciona igual: joga as fotos em `images/processo/`,
+nomeadas `1.jpg`, `2.jpg`, `3.jpg`... e elas aparecem sozinhas na galeria, sem precisar editar
+HTML. Essa galeria não é clicável (não linka pra nenhuma página de serviço), é só uma vitrine
+de fotos reais do trabalho.
 
 ### Como o carrossel do deck funciona (visitante)
 
@@ -87,8 +104,8 @@ de detalhe daquele serviço (`servico.html?s=<slug>`).
 
 ## 📄 Como funciona a página de cada serviço (`servico.html`)
 
-Não existem 9 arquivos HTML separados — existe **um só template** (`servico.html`) que lê o
-parâmetro `?s=` da URL (ex: `servico.html?s=automacao-residencial`) e busca o conteúdo daquele
+Não existem 12 arquivos HTML separados — existe **um só template** (`servico.html`) que lê o
+parâmetro `?s=` da URL (ex: `servico.html?s=automacao-eletrica`) e busca o conteúdo daquele
 serviço em `js/servicos-data.js`.
 
 ### Para editar o texto de um serviço
@@ -122,7 +139,7 @@ git push
 
 Os navegadores guardam esses dois arquivos em cache por um bom tempo. Por isso, o `index.html` e
 o `servico.html` carregam eles com um número de versão no final do link, por exemplo:
-`css/style.css?v=9`. **Toda vez que você editar o CSS ou o `main.js`, aumente esse número em 1**
+`css/style.css?v=10`. **Toda vez que você editar o CSS ou o `main.js`, aumente esse número em 1**
 nos dois arquivos (`index.html` e `servico.html`), senão quem já visitou o site antes vai continuar
 vendo a versão antiga por um tempo.
 
@@ -143,8 +160,9 @@ vendo a versão antiga por um tempo.
 **Números de prova social (reais):** 500+ projetos · 15 anos de experiência · 93% de satisfação ·
 **6 meses de garantia** (3 meses por lei + 3 meses por conta da empresa).
 
-**Serviços:** Instalações Elétricas · Manutenção Elétrica · Automação Residencial · Câmeras e CFTV ·
-Iluminação e Tomadas · Energia Solar · Alarmes e Segurança · Projetos e Consultoria · Interfone e Portaria.
+**Serviços:** Instalação Elétrica · Manutenção Elétrica · Automação Elétrica · CFTV · Iluminação ·
+Iluminação de Móveis · Painel Solar · Alarmes e Segurança · Projetos Elétricos · Interfone ·
+Controlador de Acesso · Trabalho em Altura.
 
 ---
 
@@ -162,6 +180,7 @@ O site já tem a tag do Google Ads (`gtag.js`, ID `AW-967355608`) instalada no `
 | Número de WhatsApp | Buscar `5511992137770` em `index.html`, `servico.html` e `js/main.js` |
 | E-mail | Buscar `djinstatec@gmail.com` em `index.html` e `servico.html` |
 | Fotos de cada serviço | Pastas `images/servicos/<slug>/`, arquivos `1.jpg`, `2.jpg`... (ver seção acima) |
+| Fotos da galeria de bastidores | Pasta `images/processo/`, arquivos `1.jpg`, `2.jpg`... |
 | Textos de cada serviço | `js/servicos-data.js` (ver seção acima) |
 | Contadores (projetos, anos, %, garantia) | Atributos `data-target`/`data-suffix` na seção STATS do `index.html` |
 | Depoimentos | Seção `<!-- DEPOIMENTOS -->` no `index.html` |
