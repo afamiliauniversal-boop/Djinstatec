@@ -98,7 +98,7 @@ if('IntersectionObserver' in window){
 })();
 
 /* ===== WhatsApp form ===== */
-const WA_NUMBER='5511992137770';
+const WA_NUMBER='5511920075078';
 document.getElementById('waForm')?.addEventListener('submit',function(ev){
   ev.preventDefault();
   const nome=document.getElementById('nome').value.trim();

@@ -35,7 +35,7 @@
      ajustamos a mensagem dele pra já vir com o nome do serviço certo */
   const waText=encodeURIComponent(data.waMsg||`Olá! Quero saber mais sobre ${data.title}.`);
   const waFloat=document.querySelector('.wa-float');
-  if(waFloat) waFloat.href=`https://wa.me/5511992137770?text=${waText}`;
+  if(waFloat) waFloat.href=`https://wa.me/5511920075078?text=${waText}`;
 
   /* mesmo carrossel de imagens que roda no card do leque, agora em tela cheia */
   const folder=`images/servicos/${slug}/`;

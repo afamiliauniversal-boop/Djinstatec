@@ -151,7 +151,7 @@ vendo a versão antiga por um tempo.
 |---|---|
 | Nome | D&J INSTATEC, Engenharia Elétrica e Automação |
 | CNPJ | 18.184.811/0001-55 (MEI ativo) |
-| WhatsApp | (11) 99213-7770 → https://wa.me/5511992137770 |
+| WhatsApp | (11) 92007-5078 → https://wa.me/5511920075078 |
 | E-mail | djinstatec@gmail.com |
 | Localização | São Paulo / SP e Grande SP |
 | Domínio | djinstatec.com.br |
@@ -177,7 +177,7 @@ O site já tem a tag do Google Ads (`gtag.js`, ID `AW-967355608`) instalada no `
 
 | O que mudar | Onde fica |
 |---|---|
-| Número de WhatsApp | Buscar `5511992137770` em `index.html`, `servico.html` e `js/main.js` |
+| Número de WhatsApp | Buscar `5511920075078` em `index.html`, `servico.html` e `js/main.js` |
 | E-mail | Buscar `djinstatec@gmail.com` em `index.html` e `servico.html` |
 | Fotos de cada serviço | Pastas `images/servicos/<slug>/`, arquivos `1.jpg`, `2.jpg`... (ver seção acima) |
 | Fotos da galeria de bastidores | Pasta `images/processo/`, arquivos `1.jpg`, `2.jpg`... |
