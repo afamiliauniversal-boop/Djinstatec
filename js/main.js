@@ -179,7 +179,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
         /* esse card sairia da faixa visível: recicla instantaneamente pro lado
            oposto ENQUANTO está fora de vista, sem transição, sem "voar" na tela */
         card.style.transition='none';
-        next=next>HALF?next-N:next+N;
+        next=next>VISIBLE_RADIUS?next-N:next+N;
         pos[i]=next;
         applyStyle(card,pos[i]);
         void card.offsetWidth; /* força o navegador a aplicar antes de reativar a transição */
