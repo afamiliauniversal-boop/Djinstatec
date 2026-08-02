@@ -130,7 +130,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
   const prevBtn=deck.querySelector('.deck-nav.prev');
   const nextBtn=deck.querySelector('.deck-nav.next');
   const N=cards.length;
-  const HALF=Math.floor(N/2); /* cards na posição HALF ficam invisíveis: são só o "buffer" da reciclagem */
+  const VISIBLE_RADIUS=2; /* mantém somente 1 card central + 2 cards apagados de cada lado */
   const AUTOPLAY_MS=3500;
   let autoplayTimer=null;
 
@@ -146,8 +146,8 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
   /* pos[i] = posição contínua do card i em relação ao centro (pode ser qualquer inteiro) */
   const pos=cards.map((_,i)=>{
     let p=i-initialActive;
-    while(p>HALF)p-=N;
-    while(p<-HALF)p+=N;
+    while(p>VISIBLE_RADIUS)p-=N;
+    while(p<-VISIBLE_RADIUS)p+=N;
     return p;
   });
 
@@ -158,12 +158,13 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
     const spread=deck.classList.contains('is-spread')?1.15:1;
     const x=p*step()*spread;
     /* raio invertido: o card central fica menor/atrás; os das pontas crescem à frente */
-    const scale=Math.min(0.72+abs*0.09,1.05);
+    const scale=p===0?1.05:0.86;
     card.style.transform=`translateX(${x}px) scale(${scale})`;
-    card.style.zIndex=String(10+abs);
-    const visible=abs<HALF;
-    card.style.opacity=visible?'1':'0';
+    card.style.zIndex=p===0?'30':String(20-abs);
+    const visible=abs<=VISIBLE_RADIUS;
+    card.style.opacity=visible?(p===0?'1':'0.38'):'0';
     card.style.pointerEvents=visible?'auto':'none';
+    card.style.filter=p===0?'none':'saturate(.72)';
     card.classList.toggle('is-active',p===0);
   }
 
@@ -174,7 +175,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
     if(!delta)return;
     cards.forEach((card,i)=>{
       let next=pos[i]-delta;
-      if(next>HALF||next<-HALF){
+      if(next>VISIBLE_RADIUS||next<-VISIBLE_RADIUS){
         /* esse card sairia da faixa visível: recicla instantaneamente pro lado
            oposto ENQUANTO está fora de vista, sem transição, sem "voar" na tela */
         card.style.transition='none';
@@ -199,7 +200,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
   cards.forEach((card,i)=>card.addEventListener('click',()=>{
     if(card.classList.contains('is-active')){
       const slug=card.dataset.slug;
-      if(slug) window.location.href=`servico.html?s=${encodeURIComponent(slug)}`;
+      if(slug) window.location.href=`servicos/${encodeURIComponent(slug)}.html`;
     }else{
       shift(pos[i]); /* traz esse card pro centro, andando só a distância necessária */
     }
@@ -212,11 +213,23 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
   render();
   startAutoplay();
 
-  /* carrossel de imagens de CADA card — ver DJ_startFolderCarousel (reaproveitado na página de serviço) */
-  cards.forEach(card=>{
+  /* Carrega imagens somente para os cinco cards visíveis. Os demais entram sob demanda. */
+  const started= new WeakSet();
+  function ensureCarousel(card){
+    if(started.has(card))return;
     const folder=card.dataset.folder, imgEl=card.querySelector('.dc-img');
-    if(folder&&imgEl) window.DJ_startFolderCarousel(imgEl,folder);
-  });
+    if(folder&&imgEl){
+      started.add(card);
+      window.DJ_startFolderCarousel(imgEl,folder);
+    }
+  }
+  const baseRender=render;
+  render=function(){
+    baseRender();
+    cards.forEach((card,i)=>{
+      if(Math.abs(pos[i])<=VISIBLE_RADIUS)ensureCarousel(card);
+    });
+  };
 
   /* estrelas + selo "mais pedido" + 100% satisfação, a partir dos data-attributes de cada card */
   cards.forEach(card=>{
