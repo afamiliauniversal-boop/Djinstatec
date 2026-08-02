@@ -28,6 +28,24 @@ window.DJ_startFolderCarousel=function(imgEl,folder){
   }
 };
 
+/* ===== Rastreamento de contatos =====
+   Registra cliques de WhatsApp e telefone como eventos úteis para configurar no Google Ads. */
+window.DJ_trackContact=function(type,label){
+  if(typeof gtag!=='function')return;
+  gtag('event',type==='whatsapp'?'whatsapp_click':'phone_click',{
+    event_category:'lead',
+    event_label:label||'site',
+    transport_type:'beacon'
+  });
+};
+document.addEventListener('click',function(ev){
+  const link=ev.target.closest?.('a[href]');
+  if(!link)return;
+  const href=link.getAttribute('href')||'';
+  if(href.includes('wa.me'))DJ_trackContact('whatsapp',link.textContent.trim()||'whatsapp');
+  if(href.startsWith('tel:'))DJ_trackContact('phone',link.textContent.trim()||'telefone');
+});
+
 /* ===== Header scroll ===== */
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)});
@@ -107,6 +125,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
   if(bairro)texto+=`*Local:* ${bairro}%0A`;
   if(msg)texto+=`*Detalhes:* ${msg}%0A`;
   texto+=`%0AGostaria de um orçamento grátis. 🙏`;
+  DJ_trackContact('whatsapp','formulario de orçamento');
   window.open(`https://wa.me/${WA_NUMBER}?text=${texto}`,'_blank');
 });
 
