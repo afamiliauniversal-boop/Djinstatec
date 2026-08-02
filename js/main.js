@@ -74,27 +74,28 @@ if('IntersectionObserver' in window){
   nums.forEach(el=>el.textContent=el.dataset.target+(el.dataset.suffix||''));
 }
 
-/* ===== Galeria "Processo" (bastidores) — carrega sozinha todas as fotos de images/processo/ =====
-   Mesma lógica de detecção automática do carrossel dos serviços: testa 1.jpg, 2.jpg... até não
-   achar mais nenhuma. Adicionar fotos na pasta é suficiente, não precisa mexer em HTML/JS. */
+/* ===== Galeria "Processo" — seleção de fotos reais mais fortes =====
+   A ordem privilegia resultados prontos e detalhes de acabamento. */
 (function(){
   const gallery=document.getElementById('processoGallery');
   if(!gallery)return;
-  let n=1;
-  const MAX_PROBE=200;
-  (function probe(){
-    const test=new Image();
-    test.onload=()=>{
+  const fotos=[
+    {n:7,alt:'Sala com iluminação em LED finalizada pela D&J INSTATEC'},
+    {n:8,alt:'Iluminação planejada em móvel e teto'},
+    {n:6,alt:'Detalhe de iluminação linear em LED'},
+    {n:5,alt:'Instalação de pontos de iluminação no teto'},
+    {n:2,alt:'Preparação da infraestrutura elétrica durante a obra'}
+  ];
+  fotos.forEach(({n,alt})=>{
+    const img=new Image();
+    img.onload=()=>{
       const item=document.createElement('div');
       item.className='pf-item reveal show';
-      item.innerHTML=`<img src="images/processo/${n}.jpg" alt="Processo de trabalho D&J INSTATEC">`;
+      item.innerHTML=`<img src="images/processo/${n}.jpg" alt="${alt}" loading="lazy">`;
       gallery.appendChild(item);
-      n++;
-      if(n<=MAX_PROBE)probe();
     };
-    test.onerror=()=>{};
-    test.src=`images/processo/${n}.jpg`;
-  })();
+    img.src=`images/processo/${n}.jpg`;
+  });
 })();
 
 /* ===== WhatsApp form ===== */
@@ -151,7 +152,11 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
     return p;
   });
 
-  function step(){ return deck.clientWidth<500?90:120; } /* px de deslocamento por card */
+  function step(){
+    if(deck.clientWidth<500)return 145;
+    if(deck.clientWidth<960)return 175;
+    return 215;
+  } /* cards quase separados pela própria largura */
 
   function applyStyle(card,p){
     const abs=Math.abs(p);
