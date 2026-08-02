@@ -86,16 +86,11 @@ if('IntersectionObserver' in window){
     {n:5,alt:'Instalação de pontos de iluminação no teto'},
     {n:2,alt:'Preparação da infraestrutura elétrica durante a obra'}
   ];
-  fotos.forEach(({n,alt})=>{
-    const img=new Image();
-    img.onload=()=>{
-      const item=document.createElement('div');
-      item.className='pf-item reveal show';
-      item.innerHTML=`<img src="images/processo/${n}.jpg" alt="${alt}" loading="lazy">`;
-      gallery.appendChild(item);
-    };
-    img.src=`images/processo/${n}.jpg`;
-  });
+  gallery.innerHTML=fotos.map(({n,alt})=>`
+    <div class="pf-item reveal show">
+      <img src="images/processo/${n}.jpg" alt="${alt}" loading="lazy">
+    </div>
+  `).join('');
 })();
 
 /* ===== WhatsApp form ===== */
