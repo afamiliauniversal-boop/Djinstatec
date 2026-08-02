@@ -230,6 +230,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
       if(Math.abs(pos[i])<=VISIBLE_RADIUS)ensureCarousel(card);
     });
   };
+  render();
 
   /* estrelas + selo "mais pedido" + 100% satisfação, a partir dos data-attributes de cada card */
   cards.forEach(card=>{
