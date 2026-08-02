@@ -20,7 +20,8 @@ está vendo no momento.
 ```
 Djinstatec-publish/
 ├── index.html                  ← página inicial (hero + deck de serviços + seções)
-├── servico.html                ← página de detalhe (uma só, o conteúdo muda por ?s=<slug>)
+├── servico.html                ← template/compatibilidade para links antigos
+├── servicos/                   ← uma página SEO própria para cada serviço
 ├── CNAME                       ← domínio customizado do GitHub Pages (djinstatec.com.br)
 ├── css/
 │   └── style.css               ← todos os estilos (tema escuro, deck, páginas de serviço)
@@ -102,11 +103,11 @@ de fotos reais do trabalho.
 
 ---
 
-## 📄 Como funciona a página de cada serviço (`servico.html`)
+## 📄 Como funcionam as páginas de serviço
 
-Não existem 12 arquivos HTML separados — existe **um só template** (`servico.html`) que lê o
-parâmetro `?s=` da URL (ex: `servico.html?s=automacao-eletrica`) e busca o conteúdo daquele
-serviço em `js/servicos-data.js`.
+Cada serviço tem uma página HTML própria em `servicos/`, com título, descrição, canonical, dados estruturados e conteúdo específico para explicar o que o serviço é, por que é importante e o que está incluído. Exemplos: `servicos/instalacao-eletrica.html` e `servicos/cftv.html`.
+
+O conteúdo-base continua organizado em `js/servicos-data.js`, que também alimenta o template antigo `servico.html`.
 
 ### Para editar o texto de um serviço
 
