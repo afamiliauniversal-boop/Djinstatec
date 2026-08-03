@@ -5,6 +5,12 @@ Site estático, sem backend, hospedado no **GitHub Pages**.
 
 🔗 **Domínio oficial:** https://djinstatec.com.br
 
+## 🧠 Memória consolidada do projeto
+
+O registro completo da arquitetura, funcionamento, alterações realizadas, rastreamento do Google Ads, decisões de conteúdo, páginas de serviço e recomendações de manutenção está em [docs/MEMORIA-DO-PROJETO.md](docs/MEMORIA-DO-PROJETO.md).
+
+Esse documento é a referência de continuidade do site. Ele também separa as informações públicas do projeto dos dados privados da conta de anúncios, que não devem ser publicados no repositório.
+
 ---
 
 ## 🎯 Objetivo
