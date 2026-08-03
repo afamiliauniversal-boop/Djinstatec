@@ -56,6 +56,14 @@ document.addEventListener('click',function(ev){
   if(href.startsWith('tel:'))DJ_trackContact('phone',link.textContent.trim()||'telefone');
 });
 
+/* ===== Cards de serviços clicáveis ===== */
+document.querySelectorAll('.card[data-service]').forEach(card=>{
+  card.addEventListener('click',function(ev){
+    if(ev.target.closest?.('a,button'))return;
+    window.location.href=`servicos/${encodeURIComponent(card.dataset.service)}.html`;
+  });
+});
+
 /* ===== Header scroll ===== */
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)});
