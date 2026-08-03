@@ -434,3 +434,24 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 @media(max-width:640px){
   .service-card .service-thumb{height:150px}
 }
+
+/* Sobre o profissional */
+.about-pro{background:var(--bg-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-pro-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.about-pro-intro .title{margin-top:12px}
+.about-pro-intro .sub{max-width:520px;margin-top:18px}
+.about-pro-years{display:flex;align-items:center;gap:14px;margin-top:30px}
+.about-pro-years strong{font-size:3.8rem;line-height:1;font-weight:800;color:var(--accent)}
+.about-pro-years span{color:var(--muted);font-size:.9rem;line-height:1.45}
+.about-pro-card{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow)}
+.about-pro-badge{display:flex;align-items:center;gap:10px;color:var(--accent);font-weight:700;margin-bottom:16px}
+.about-pro-badge i{font-size:1.35rem}
+.about-pro-card>p{color:var(--muted);line-height:1.65;margin-bottom:22px}
+.about-pro-tags{display:flex;flex-wrap:wrap;gap:8px}
+.about-pro-tags span{font-size:.78rem;color:var(--white);border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:100px;padding:7px 11px}
+.about-pro-study{display:flex;align-items:flex-start;gap:12px;border-top:1px solid var(--line);margin-top:24px;padding-top:20px;color:var(--muted);font-size:.88rem;line-height:1.5}
+.about-pro-study i{color:var(--accent);font-size:1.25rem;margin-top:2px}
+.about-pro-study b{color:var(--white)}
+@media(max-width:960px){
+  .about-pro-grid{grid-template-columns:1fr;gap:30px}
+}
