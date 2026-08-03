@@ -104,7 +104,7 @@ if('IntersectionObserver' in window){
     {n:5,alt:'Instalação de pontos de iluminação no teto',label:'Instalação'},
     {n:2,alt:'Preparação da infraestrutura elétrica durante a obra',label:'Infraestrutura'}
   ];
-  gallery.innerHTML=fotos.map(({n,alt})=>`
+  gallery.innerHTML=fotos.map(({n,alt,label})=>`
     <div class="pf-item reveal show">
       <img src="images/processo/${n}.jpg" alt="${alt}" loading="lazy"><div class="pf-overlay"><span class="pf-tag">Processo</span><h4>${label}</h4></div>
     </div>
