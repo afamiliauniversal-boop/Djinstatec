@@ -169,8 +169,7 @@ Controlador de Acesso · Trabalho em Altura.
 
 ## 📈 Rastreamento (Google Ads)
 
-O site já tem a tag do Google Ads (`gtag.js`, ID `AW-967355608`) instalada no `<head>` de
-`index.html` e `servico.html`. Não há Google Analytics separado instalado.
+O site já tem a tag do Google Ads (`gtag.js`, ID `AW-967355608`) instalada nas páginas. O `js/main.js` registra os eventos `whatsapp_click` e `phone_click`; basta criar/associar esses eventos como conversões no Google Ads. Não há Google Analytics separado instalado.
 
 ---
 
