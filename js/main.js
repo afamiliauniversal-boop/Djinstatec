@@ -30,11 +30,15 @@ window.DJ_startFolderCarousel=function(imgEl,folder){
 
 /* ===== Rastreamento de contatos =====
    Registra cliques de WhatsApp e telefone como eventos úteis para configurar no Google Ads. */
+const DJ_campaignParams=new URLSearchParams(window.location.search);
+const DJ_hasGoogleAdsClick=DJ_campaignParams.has('gclid')||DJ_campaignParams.get('utm_source')==='google' || DJ_campaignParams.get('utm_medium')==='cpc';
 window.DJ_trackContact=function(type,label){
   if(typeof gtag!=='function')return;
   gtag('event',type==='whatsapp'?'whatsapp_click':'phone_click',{
     event_category:'lead',
     event_label:label||'site',
+    campaign_source:DJ_hasGoogleAdsClick?'google_ads':'organic_or_direct',
+    page_location:window.location.href,
     transport_type:'beacon'
   });
 };
@@ -124,6 +128,7 @@ document.getElementById('waForm')?.addEventListener('submit',function(ev){
   texto+=`*Serviço:* ${servico}%0A`;
   if(bairro)texto+=`*Local:* ${bairro}%0A`;
   if(msg)texto+=`*Detalhes:* ${msg}%0A`;
+  if(DJ_hasGoogleAdsClick)texto+=`*Origem:* Google Ads%0A`;
   texto+=`%0AGostaria de um orçamento grátis. 🙏`;
   DJ_trackContact('whatsapp','formulario de orçamento');
   window.open(`https://wa.me/${WA_NUMBER}?text=${texto}`,'_blank');
