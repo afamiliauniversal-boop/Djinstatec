@@ -424,3 +424,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 @media(min-width:641px) and (max-width:960px){
   .symptoms-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* Cards de serviços com foto e navegação */
+.service-card{cursor:pointer}
+.service-card .service-thumb{height:142px;margin:-30px -28px 24px;overflow:hidden;background:#111}
+.service-card .service-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s,filter .3s}
+.service-card:hover .service-thumb img{transform:scale(1.06);filter:brightness(1.08)}
+.service-card .ico{display:none}
+@media(max-width:640px){
+  .service-card .service-thumb{height:150px}
+}
