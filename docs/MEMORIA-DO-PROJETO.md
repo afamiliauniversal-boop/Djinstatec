@@ -156,7 +156,55 @@ O status “Qualificada” não garante que o anúncio apareça em toda simulaç
 7. Não alterar orçamento, raio e palavras-chave várias vezes durante o período inicial de observação.
 8. Melhorar as avaliações reais no Perfil da Empresa no Google quando houver o link público disponível.
 
-## 10. Regras para futuras alterações
+## 10. Auditoria completa da campanha “Eletricista” — resultado registrado
+
+Foi realizada uma auditoria dos principais pontos da campanha. O resultado foi:
+
+- nenhum bloqueio técnico de configuração encontrado;
+- campanha ativa e qualificada;
+- grupo de anúncios, anúncio responsivo e 21 de 24 palavras-chave qualificados;
+- programação aberta todos os dias, em todos os horários;
+- segmentação por raio de 25 km ao redor da região da Vila Carrão, sem locais excluídos;
+- estratégia Maximizar cliques sem limite máximo de CPC;
+- rede de pesquisa habilitada, com parceiros de pesquisa e Display ativos;
+- dispositivos ativos e sem ajustes restritivos;
+- nenhum público-alvo restringindo a entrega;
+- anúncio aprovado, com eficácia classificada como Média;
+- faturamento informado como ativo, sem suspensão ou alerta de pagamento;
+- nenhuma alteração foi aplicada durante a auditoria;
+- orçamento diário permaneceu em R$ 15,00.
+
+O diagnóstico indica que a campanha está tecnicamente apta a gerar impressões. O zero de impressões não foi atribuído a uma trava de configuração, mas à competitividade do leilão, ao orçamento reduzido para a região e à ausência de histórico suficiente na estratégia Maximizar cliques.
+
+### Limitações encontradas
+
+Três palavras-chave foram classificadas como “Não qualificadas — baixo volume de pesquisas”:
+
+- “conserto elétrico residencial”;
+- “instalação elétrica tatuapé”;
+- “servico de eletricista sao paulo”.
+
+Também foram registrados:
+
+- eficácia do anúncio em nível Médio;
+- apenas um grupo de anúncios com um anúncio;
+- raio de 25 km e orçamento de R$ 15,00/dia como limitadores naturais de alcance;
+- verificação do anunciante pendente;
+- aceite dos termos dos anúncios de formulário de lead pendente.
+
+A verificação do anunciante e o aceite de termos devem ser concluídos pelo responsável da conta, pois envolvem identidade, telefone e concordância legal. Nenhuma dessas etapas foi executada em nome do usuário.
+
+### Ações possíveis sem aumentar o orçamento
+
+Ficaram como opções para uma decisão posterior:
+
+1. pausar as três palavras-chave de baixo volume;
+2. desativar a Rede de Display para concentrar o orçamento na Pesquisa;
+3. reforçar títulos e descrições para tentar elevar a eficácia do anúncio de Média para Boa ou Excelente.
+
+Essas ações não foram aplicadas automaticamente. A recomendação é observar primeiro as impressões reais e os termos de pesquisa, evitando alterações sucessivas sem dados.
+
+## 11. Regras para futuras alterações
 
 - Preservar o botão flutuante do WhatsApp.
 - Não inserir CTA duplicado no topo sem uma decisão específica.
