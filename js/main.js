@@ -30,9 +30,15 @@ window.DJ_startFolderCarousel=function(imgEl,folder){
 
 /* ===== Rastreamento de contatos =====
    Registra cliques de WhatsApp e telefone como eventos úteis para configurar no Google Ads. */
+const DJ_CONVERSION_SEND_TO='AW-967355608/UdImCLDYutQcENjZos0D';
 const DJ_campaignParams=new URLSearchParams(window.location.search);
 const DJ_hasGoogleAdsClick=DJ_campaignParams.has('gclid')||DJ_campaignParams.get('utm_source')==='google' || DJ_campaignParams.get('utm_medium')==='cpc';
+window.DJ_sendConversion=function(){
+  if(typeof gtag!=='function')return;
+  gtag('event','conversion',{send_to:DJ_CONVERSION_SEND_TO,transport_type:'beacon'});
+};
 window.DJ_trackContact=function(type,label){
+  DJ_sendConversion();
   if(typeof gtag!=='function')return;
   gtag('event',type==='whatsapp'?'whatsapp_click':'phone_click',{
     event_category:'lead',
