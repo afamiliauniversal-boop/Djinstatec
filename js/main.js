@@ -98,15 +98,15 @@ if('IntersectionObserver' in window){
   const gallery=document.getElementById('processoGallery');
   if(!gallery)return;
   const fotos=[
-    {n:7,alt:'Sala com iluminação em LED finalizada pela D&J INSTATEC'},
-    {n:8,alt:'Iluminação planejada em móvel e teto'},
-    {n:6,alt:'Detalhe de iluminação linear em LED'},
-    {n:5,alt:'Instalação de pontos de iluminação no teto'},
-    {n:2,alt:'Preparação da infraestrutura elétrica durante a obra'}
+    {n:7,alt:'Sala com iluminação em LED finalizada pela D&J INSTATEC',label:'Resultado final'},
+    {n:8,alt:'Iluminação planejada em móvel e teto',label:'Acabamento'},
+    {n:6,alt:'Detalhe de iluminação linear em LED',label:'Detalhe em LED'},
+    {n:5,alt:'Instalação de pontos de iluminação no teto',label:'Instalação'},
+    {n:2,alt:'Preparação da infraestrutura elétrica durante a obra',label:'Infraestrutura'}
   ];
   gallery.innerHTML=fotos.map(({n,alt})=>`
     <div class="pf-item reveal show">
-      <img src="images/processo/${n}.jpg" alt="${alt}" loading="lazy">
+      <img src="images/processo/${n}.jpg" alt="${alt}" loading="lazy"><div class="pf-overlay"><span class="pf-tag">Processo</span><h4>${label}</h4></div>
     </div>
   `).join('');
 })();
